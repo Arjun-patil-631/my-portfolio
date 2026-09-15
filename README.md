@@ -1,33 +1,34 @@
 # Arjun Patil — Portfolio
 
-A professional, light-theme portfolio concept built with React + TypeScript + Vite.
+A clean, personal React + TypeScript + Vite portfolio built around a paper/ink visual language with restrained green accents and purposeful motion.
 
-## Core visual idea
-- Warm paper/off-white foundation
-- Restrained green accent
-- Handwritten signature + quote motifs
-- Dot-grid texture
-- Code-bracket language around projects
-- Subtle AI/brain visual language
-- Flowing waves between major sections
-- Scroll reveal, floating terminal, typing cursor, progress animation, timeline draw and card hover motion
+## Included
 
-## Run
+- Phase 1: color, typography, spacing, responsive layout
+- Phase 2: portfolio identity, project hierarchy, journey, skills, next steps, contact
+- Phase 3: scroll reveals, terminal cursor, typewriter micro-animation, progress animation, floating rings, hover motion, active navigation, subtle pointer parallax
+- Phase 4: responsive mobile navigation, reduced-motion support, metadata/SEO basics, production build setup
+
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the local URL shown by Vite.
-
-## Important before publishing
-Replace the placeholder email in `src/main.tsx` and verify project descriptions, progress values, links and resume URL before deploying.
-
-## Build
+## Production check
 
 ```bash
 npm run build
+npm run preview
 ```
 
-The project is intentionally dependency-light. The only runtime dependencies are React and React DOM; Vite/TypeScript provide the development/build setup.
+## Before publishing
+
+1. Replace `your-email@example.com` in `src/main.tsx` with your real email.
+2. Add the final resume file/link when you have the version you want public.
+3. Verify every project description and link against the final repositories.
+4. Replace any progress percentage that changes over time.
+5. Add a favicon / social preview image if desired.
+
+The visual system intentionally avoids fake skill percentages, fake metrics, and exaggerated claims.
