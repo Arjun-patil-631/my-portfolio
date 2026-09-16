@@ -19,7 +19,15 @@ const projects: Project[] = [
       'A privacy-focused journaling product exploring secure personal data, AI-assisted reflection, and a calm writing experience.',
     tags: ['React', 'Firebase', 'Gemini'],
     featured: true,
-    href:'https://github.com/Arjun-patil-631/1M1B-AI-for-Sustainability-Virtual-Internship'
+    href: 'https://github.com/Arjun-patil-631/1M1B-AI-for-Sustainability-Virtual-Internship'
+  },
+  {
+    title: 'Modiqo Playoffs 2026',
+    kind: 'AI Agents / Workflow',
+    description:
+      'Exploring how successful AI-agent workflows can be turned into reusable, inspectable procedures using Modiqo Rote.',
+    tags: ['AI Agents', 'Automation', 'Rote'],
+    href: 'https://github.com/Arjun-patil-631/modiqo-playoffs-2026',
   },
   {
     title: 'Car Rental Management System',
@@ -181,11 +189,19 @@ function App() {
           <button className="menu-btn" onClick={() => setMenuOpen((v) => !v)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             {['home', 'about', 'works', 'journey', 'skills', 'next', 'contact'].map((id) => (
-              <button key={id} className={active === id ? 'active' : ''} onClick={() => go(id)}>
-                {id === 'next' ? "What's Next" : id[0].toUpperCase() + id.slice(1)}
+              <button
+                key={id}
+                className={active === id ? 'active' : ''}
+                onClick={() => go(id)}
+              >
+                {id === 'works'
+                  ? 'Works'
+                  : id === 'next'
+                    ? "What's Next"
+                    : id[0].toUpperCase() + id.slice(1)}
               </button>
             ))}
-            <button className="resume" onClick={() => window.open('https://drive.google.com/file/d/1LRicABtRiwHcDJPXchtFb9R44cmVSocR/view?usp=sharing','_blank')}>Resume <span>↗</span></button>
+            <button className="resume" onClick={() => window.open('https://drive.google.com/file/d/1LRicABtRiwHcDJPXchtFb9R44cmVSocR/view?usp=sharing', '_blank')}>Resume <span>↗</span></button>
           </div>
         </nav>
       </header>
@@ -252,7 +268,7 @@ function App() {
           </Reveal>
         </section>
 
-        <section id="projects" className="section container projects">
+        <section id="works" className="section container projects">
           <Reveal><div className="section-label">02 / WORKS <span className="brackets">&lt; / &gt;</span></div></Reveal>
           <div className="section-heading-row projects-head">
             <Reveal><div><h2>Works that matter<span>.</span></h2><p>Not everything I’ve coded — just the things worth talking about.</p></div></Reveal>
@@ -264,7 +280,15 @@ function App() {
                 <article className={`project-card ${project.featured ? 'featured' : ''}`}>
                   <div className="project-art">
                     <div className="project-art-grid" />
-                    <span className="project-art-icon">{project.featured ? '✦' : i === 1 ? '▦' : '</>'}</span>
+                    <span className="project-art-icon">
+                      {project.featured
+                        ? '✦'
+                        : project.title === 'Modiqo Playoffs 2026'
+                          ? '↯'
+                          : project.title === 'Car Rental Management System'
+                            ? '▦'
+                            : '</>'}
+                    </span>
                     <div className="project-art-line line-a" /><div className="project-art-line line-b" /><div className="project-art-dot" />
                     <span className="project-index">0{i + 1}</span>
                   </div>
